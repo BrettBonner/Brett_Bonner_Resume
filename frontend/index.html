@@ -82,7 +82,7 @@
   <script>
     async function updateVisitorCount() {
       try {
-        const response = await fetch('https://w4rp6bja93.execute-api.us-east-2.amazonaws.com/prod');
+        const response = await fetch('https://w4rp6bja93.execute-api.us-east-2.amazonaws.com/prod/visitor');
         const data = await response.json();
         document.getElementById('visitor-count').textContent = data.count || "Unavailable";
       } catch (error) {
