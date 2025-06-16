@@ -9,7 +9,7 @@ def lambda_handler(event, context):
     response = table.update_item(
         #Row I want to update
         Key={'id': 'resume'},
-        UpdateExpression='Set #c = if_not_exists(#c, :start) + :inc',
+        UpdateExpression='set #c = if_not_exists(#c, :start) + :inc',
         ExpressionAttributeNames={'#c': 'count'},
         ExpressionAttributeValues={':inc': 1, ':start': 0},
         ReturnValues='UPDATED_NEW'
