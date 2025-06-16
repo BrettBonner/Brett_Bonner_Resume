@@ -1,0 +1,43 @@
+name: Deploy Backend
+
+on:
+  push:
+    paths:
+      - 'backend/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies and SAM CLI
+        run: |
+          pip install aws-sam-cli
+          pip install -r backend/requirements.txt || true
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v3
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-2
+
+      - name: Run unit tests
+        working-directory: backend
+        run: python3 -m unittest discover tests
+
+      - name: SAM build and deploy
+        working-directory: backend
+        run: |
+          sam build
+          sam deploy --no-confirm-changeset --no-fail-on-empty-changeset \
+            --stack-name cloud-resume-backend \
+            --capabilities CAPABILITY_IAM
