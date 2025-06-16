@@ -1,48 +1,59 @@
 /* Body and layout */
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  max-width: 850px;
-  margin: 40px auto;
-  padding: 0 20px;
-  line-height: 1.6;
+  font-family: "Georgia", "Times New Roman", serif;
+  background-color: #ffffff;
+  color: #2a2a2a;
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 30px;
+  line-height: 1.8;
+  font-size: 1.05em;
 }
 
 /* Headings */
-h1, h2 {
-  color: #2c3e50;
-  margin-bottom: 0.4em;
+h1 {
+  font-size: 2.2em;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin-bottom: 0.2em;
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 0.3em;
 }
 
 h2 {
-  margin-top: 40px;
+  font-size: 1.4em;
+  color: #2c3e50;
+  margin-top: 50px;
+  margin-bottom: 0.4em;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.2em;
 }
 
 /* Contact info */
 .contact {
   font-size: 0.95em;
   color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
 /* Section spacing */
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 /* List styling */
 ul {
-  padding-left: 20px;
+  padding-left: 22px;
 }
 
 li {
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 /* Links */
 a {
-  color: #007acc;
+  color: #0056b3;
   text-decoration: none;
 }
 
@@ -52,15 +63,26 @@ a:hover {
 
 /* Visitor counter */
 .counter {
-  margin-top: 30px;
-  font-size: 0.95em;
-  color: #888;
+  margin-top: 40px;
+  font-size: 0.9em;
+  color: #666;
+  font-style: italic;
+  text-align: right;
 }
 
 /* Responsive (mobile) adjustments */
 @media (max-width: 600px) {
   body {
-    margin: 20px 10px;
-    padding: 0 10px;
+    margin: 30px 15px;
+    padding: 0 15px;
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.8em;
+  }
+
+  h2 {
+    font-size: 1.25em;
   }
 }
