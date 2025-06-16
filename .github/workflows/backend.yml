@@ -39,5 +39,6 @@ jobs:
         run: |
           sam build
           sam deploy --no-confirm-changeset --no-fail-on-empty-changeset \
+            --resolve-s3 \
             --stack-name cloud-resume-backend \
             --capabilities CAPABILITY_IAM
