@@ -1,5 +1,7 @@
 # Brett_Bonner_Resume
 
+Resume: https://d1gcft6jzct941.cloudfront.net
+
 # Background
 
 The Cloud Resume Challenge is a hands on project designed to showcase practical cloud skills by deploying a personal resume site using AWS services. My goal was to create a live HTML/CSS resume hosted on AWS, with a serverless backed that tracks visitor counts. It also served as a great opportunity to build comfort with infrastructure as code, security policies, and CI/CD.
@@ -76,3 +78,6 @@ CORS (Cross-Origin Resource Sharing)
     At first, my workflows failed because I hadn't set the right IAM permissions for my AWS user. I had to revise my AWS policy to include access to lambda, S3, apigateway, and cloudfront.
 
     My backend deployment kept failing because of a small misconfiguration - I had incorrect file paths in the YAML file, and I was missing aws-cli installation steps in the runner environment.
+
+# Deliverables
+
