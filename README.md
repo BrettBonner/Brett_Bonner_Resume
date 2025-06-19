@@ -81,3 +81,11 @@ CORS (Cross-Origin Resource Sharing)
 
 # Deliverables
 
+1. Live Resume Website 
+    - HTML/CSS resume hosted on AWS S3 and served securely through CloudFront with HTTPS
+2. Serverless Infrastructure
+    - All backend infrastructure deployed without traditional servers, using IAM for access control, CloudWatch for logging, and DynamoDB for storage
+3. CI/CD Pipelines
+    - Frontend CI/CD: Deploys static site to S3
+    - Backend CI/CD: packages and deploys lambda function using GitHub Actions
+    - Utilized GitHub Secrets for secure AWS credential handling
